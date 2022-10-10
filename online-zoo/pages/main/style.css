@@ -8,7 +8,7 @@ header{
     display: flex;
     height: 80px;
     justify-content: center;
-    background-image: url(/online-zoo/assets/images/черный_фон.jpg);
+    background-image: url(../../assets/images/черный_фон.jpg);
     color: wheat;
 }
 
@@ -74,7 +74,7 @@ li{
 }
 
 .main_image{
-    background-image: url(/online-zoo/assets/images/Giant_Panda.jpg);
+    background-image: url(../../assets/images/Giant_Panda.jpg);
     background-repeat: no-repeat;
     max-width: 1600px;
     background-size: 100%;
