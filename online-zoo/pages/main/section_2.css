@@ -1,0 +1,78 @@
+.section_2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 605px;
+    max-width: 1600px;
+    margin: auto;
+}
+
+.bamboo{
+    display: flex;
+    width: 1160px;
+    justify-content: space-between;
+}
+
+.bamboo-cap{
+    height: 403px;
+    width: 609px;
+}
+
+.bamboo_2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 465px;
+    height: 403px;
+}
+
+.flower_foto1{
+    position: absolute;
+    left:  1400px;
+}
+
+.bamboo_text_1{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    margin: 0 0 20px 0;
+    
+    color: #333B41;
+}
+
+.bamboo_text_2{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    /* or 21px */
+    
+    
+    color: #333B41;
+}
+
+.bamboo_text_3{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    /* identical to box height, or 29px */
+    
+    
+    color: #333B41;
+    
+}
+
+.bamboo_text_4{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #333B41;
+    
+}

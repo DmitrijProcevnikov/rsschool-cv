@@ -1,0 +1,237 @@
+body{
+    margin: auto;
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    background-image: url(/online-zoo/assets/images/черный_фон.jpg);
+    color: wheat;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    width: 1160px;
+    height: 80px;
+}
+
+.text_one{
+    display: flex;
+    height: 52px;
+    width: 82px;
+    border: 1.18841px solid #FFFFFF;
+    margin-right: 63px;
+    align-items: center;
+}
+
+.h1{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.0145px;
+    line-height: 120%;
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+
+}
+
+main{
+
+}
+
+nav{
+    margin-right: auto;
+}
+
+.nav_text{
+    font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 140%;
+color: #FFFFFF;
+}
+
+.t_active{
+    color: #FE9013;
+}
+
+ul{
+    display: flex;
+    padding-left: 0;
+}
+
+li{
+    list-style: none;
+    padding-right: 58px;
+}
+
+.main_image{
+    background-image: url(/online-zoo/assets/images/Giant_Panda.jpg);
+    background-repeat: no-repeat;
+    max-width: 1600px;
+    background-size: 100%;
+    height: 50vw;
+    border: solid transparent 1px;
+    margin: auto;
+}
+
+.main_text{
+    height: 25vw;
+    width: 31vw;
+    margin-top: -25vw;
+    margin-left: calc(50% + 80px);
+    font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 6.6vw;
+line-height: 75%;
+text-align: center;
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
+
+span{
+    color: #FFEE2E;
+}
+
+.ellipse{
+    margin-top: 92px;
+    margin-left: calc(50% - 465px/2 + 239.5px);
+}
+
+.ellipse_img{
+width: 30vw;
+}
+
+button{
+    cursor: pointer;
+}
+
+.btn_1{
+    position: absolute;
+width: 18.6vw;
+height: 54px;
+left: calc(50% - 298px/2 + 332px);
+top: 39vw;
+background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+border-radius: 25px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 140%;
+text-align: center;
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
+
+@media (max-width: 640px) {
+    .header{
+        width: 100%;
+        height: 329px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 10px;
+        transition: 2s;
+        z-index: 1;
+    }
+    ul{
+        flex-direction: column;
+    }
+    .text_one{
+        margin-top: 10px;
+    }
+    .text_end{
+        margin-top: -15px;
+    }
+    .nav_text{
+        display: none;
+    }
+   
+    .fon{
+        position: fixed;
+        background-color: black;
+        opacity: 0.5;
+        height: 100vh;
+        width: 100%;
+        z-index: 3;
+        display: none;
+    }
+    .burger{
+        position: absolute;
+        right: 25px;
+        top: 30px;
+        display: flex;
+        flex-direction: column;
+        z-index: 5;
+        height: 20PX;
+        width: 25PX;
+        justify-content: space-between;
+    }
+    .burger_1{
+        width: 26px;
+        height: 2px;
+        background-color: #FFFFFF;
+        transition: 1s;        
+    }
+    .burger_2{
+        width: 26px;
+        height: 2px;
+        background-color: #FFFFFF;
+        transition: 1s;        
+    }
+    .burger_3{
+        width: 26px;
+        height: 2px;
+        background-color: #FFFFFF;
+        transition: 1s;        
+    }
+    .header_active{
+        background-color: #E5E5E5;
+        z-index: 5;
+        transition: 2s;
+    }
+    .text_one_active{
+        border: 1.18841px solid #FE9013;
+    }
+    .nav_text_active{
+        display: initial;
+        color: #333B41;
+    }
+    .h1_active{
+        color: #FE9013;
+    }
+    .burger_1_active{
+        transform: rotate(405deg);
+        margin-top: 3px;
+        background-color: #FE9013;
+        transition: 1s;
+    }
+    .burger_2_active{
+        margin-left: -600px;
+        transform: rotate(-360deg);
+        background-color: #FE9013;
+        transition: 1s;
+    }
+    .burger_3_active{
+        position: absolute;
+        transform: rotate(-405deg);
+        background-color: #FE9013;
+        transition: 2s;
+        top: 3px;
+    }
+    .fon_active{
+        display: initial;
+    }
+}
+

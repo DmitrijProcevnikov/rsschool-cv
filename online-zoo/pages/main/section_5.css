@@ -1,0 +1,49 @@
+.section_5 {
+}
+.section_5_box {
+    width: 1160px;
+    height: 630px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 127px auto;
+}
+.section_5_h2 {
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 130%;
+/* identical to box height, or 47px */
+
+text-align: center;
+
+color: #333B41;
+margin-bottom: 47px;
+}
+.section_5_card {
+    display: flex;
+    width: 100%;
+    margin-bottom: 21px;
+    justify-content: space-between;
+}
+.section_5_line {
+}
+.section_5_btn {
+    width: 298px;
+    height: 54px;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 5px;
+    margin: 31px auto auto 0;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 140%;
+/* or 22px */
+
+text-align: center;
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
