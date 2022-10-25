@@ -31,11 +31,64 @@ button4.innerText = 'Results'
 
 button1.addEventListener('click', () =>{
 random(empty);  
+step.innerText = 0;
+ 
 
 });
 
-// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-// numbers.sort(() => Math.random() - 0.5);
+// создаем счетчик и время
+
+const counter = document.createElement('div')
+counter.setAttribute('class', 'counter')
+
+const moves = document.createElement('div')
+moves.setAttribute('class', 'moves')
+moves.innerText = 'Moves:'
+
+const step = document.createElement('div')
+step.setAttribute('class', 'step')
+step.innerText = 0
+
+const time = document.createElement('dov')
+time.setAttribute('class', 'time')
+time.innerText = 'Time:'
+
+let minutes = 0;
+let minute = 0;
+let seconds = 0;
+let second = 0;
+
+
+
+const timeCounter = document.createElement('div')
+timeCounter.setAttribute('class', 'timecoumter')
+timeCounter.innerText = `${minutes} ${minute} : ${seconds} ${second}`
+
+let counterTime;
+
+function timeCount(){
+    counterTime = setInterval(() => {
+        second +=1;
+        if(second > 9){
+            seconds +=1;
+            second = 0;
+        }
+        if(seconds > 5){
+            minute +=1;
+            seconds = 0;
+        }
+        if(minute > 9){
+            minutes +=1;
+            minute = 0;
+        }
+        timeCounter.innerText = `${minutes} ${minute} : ${seconds} ${second}`
+
+    }, 1000)
+}
+
+
+
+
 
 
 const max = 100;
@@ -57,8 +110,9 @@ function random(m){
     if(leftDiff + topDiff === 1){
         valid.push(i);
     }
+    stepId = -1;
    }
-
+   
 }
 
     const swap = valid[
@@ -72,15 +126,15 @@ function random(m){
             shuffleCount += 1;
             if(shuffleCount >= max){
                 clearInterval(timer);
+                timeCount(); 
             }
         }, 30)
     }
+   
 }
 
 
 
-// const movesTime = document.createElement('div')
-// movesTime.setAttribute('class' ,'movesTime')
 
 
 // поле
@@ -98,15 +152,19 @@ const empty = {
 const cells = [];
 cells.push(empty);
 
+let stepId = null;
 
 function change(n){
-        const cell = cells[n];
+    const cell = cells[n];
     const leftDiff = Math.abs(empty.left - cell.left);
     const topDiff = Math.abs(empty.top - cell.top);
 
     if(leftDiff + topDiff > 1){
         return;
+    } else{
+    stepId += 1;
     }
+   
 
 
     cell.element.style.left = `${empty.left * cellSize}%`;
@@ -125,8 +183,10 @@ function change(n){
     });
 
     if(finish){
-        alert('You won');
+        alert(`"Hooray! You solved the puzzle in ${minutes} ${minute} : ${seconds} ${second} and ${stepId} moves!"`);
+        clearInterval(counterTime);
     };
+    
 }   
 for (let i = 1; i <= 15; i++){
     const cell = document.createElement('div');
@@ -149,7 +209,8 @@ for (let i = 1; i <= 15; i++){
     field.append(cell); 
 
     cell.addEventListener('click', () => {
-       change(i);
+        change(i);
+        step.innerText = stepId;
 
     });
 
@@ -169,6 +230,8 @@ const body = document.querySelector('body');
 
 body.appendChild(container);
 container.appendChild(div);
+container.appendChild(counter);
+counter.append(moves, step, time, timeCounter)
 container.appendChild(field);
 div.appendChild(button1);
 div.appendChild(button2);

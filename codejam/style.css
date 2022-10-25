@@ -28,6 +28,14 @@ button{
     background-color: rgb(238, 173, 173);
 }
 
+.counter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: calc(var(--size)/21);
+    margin-top: 10px;
+}
+
 .field{
     width: var(--size);
     height: var(--size);
